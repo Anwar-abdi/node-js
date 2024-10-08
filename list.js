@@ -14,3 +14,20 @@ function listFiles() {
       console.error('Error reading directory:', err);
       return;
     }
+
+    // Join the file names with new lines
+    const fileList = files.join('\n');
+
+    // Write the list to 'fileList.txt'
+    fs.writeFile(outputFilePath, fileList, (writeErr) => {
+      if (writeErr) {
+        console.error('Error writing to file:', writeErr);
+      } else {
+        console.log('File list saved successfully to fileList.txt');
+      }
+    });
+  });
+}
+
+// Run the function
+listFiles();
