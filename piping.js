@@ -9,5 +9,5 @@ const writeStream = fs.createWriteStream('destination.txt');
 // Piping the read stream into the write stream
 readStream.pipe(writeStream);
 
-console.log('File has been copied successfully From the source.');
+console.log('File has been copied successfully From the .');
 
